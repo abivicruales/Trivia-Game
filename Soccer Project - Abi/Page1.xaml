@@ -1,0 +1,39 @@
+﻿<Window x:Name="TriviaQuestion1" x:Class="Soccer_Project___Abi.Page1"
+        Width="900"
+        Height="500"
+          WindowStartupLocation="CenterScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Soccer_Project___Abi"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid x:Name="TrviaPage" Background="#FFFFF79A">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="87*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="QuestionText" Margin="0,48,0,0" TextWrapping="Wrap" Text="Who is Real Madrid's legendary number 5" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" FontFamily="Impact" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center"/>
+        <Button x:Name="Answer1Button" Content="Bellingham" HorizontalAlignment="Left" Margin="11,141,0,0" VerticalAlignment="Top" Background="#FFDDDDDD" BorderBrush="#FF231111" Foreground="Black" Height="50" Width="auto" FontFamily="Bahnschrift" MinWidth="215" MinHeight="50" FontSize="23" FontWeight="Bold" Click="Answer1Button_Click"/>
+        <Button x:Name="Answer3Button" Content="Zidane" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" BorderBrush="#FF231111" Foreground="Black" Width="auto" Height="50" FontFamily="Bahnschrift" FontSize="23" MinWidth="215" MinHeight="50" FontWeight="Bold" Click="Answer3Button_Click"/>
+        <Button x:Name="Answer2Button" Content="Ronaldo" HorizontalAlignment="Left" Margin="11,210,0,0" VerticalAlignment="Top" BorderBrush="#FF231111" Foreground="Black" Width="auto" Height="50" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="23" MinWidth="215" MinHeight="50" Click="Answer2Button_Click"/>
+        <Button x:Name="Answer4Button" Content="Carvajal" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" BorderBrush="#FF231111" Foreground="Black" Width="auto" Height="50" FontFamily="Bahnschrift" FontWeight="Bold" MinWidth="215" MinHeight="50" FontSize="23" Click="Answer4Button_Click"/>
+        <TextBlock x:Name="ResultText" HorizontalAlignment="Left" Margin="174,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF2DFD25" OpacityMask="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="62" Width="160" FontSize="30" FontWeight="Bold" FontFamily="Segoe UI Black" Grid.Column="1"/>
+        <TextBlock x:Name="score" HorizontalAlignment="Left" Margin="213,122,0,0" TextWrapping="Wrap" Text="Score: 0/0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" ContextMenuClosing="ScoreText_ContextMenuClosing" Grid.Column="1"/>
+        <Button x:Name="NextButton" Grid.Column="1" Content="Next Question" HorizontalAlignment="Left" Margin="204,374,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderBrush="#FF2E2F2D" Background="#FF90E62D" Height="31" Width="109" FontSize="14" Click="NextButton_Click"/>
+        <TextBlock x:Name="ResultTextIncorrect" HorizontalAlignment="Left" Margin="178,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFDA1F16" OpacityMask="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="60" Width="156" FontSize="30" FontWeight="Bold" FontFamily="Segoe UI Black" ContextMenuClosing="ResultTextIncorrect_ContextMenuClosing" Grid.Column="1"/>
+        <Image x:Name="MadridLogo" HorizontalAlignment="Left" Height="282" Margin="400,141,0,0" VerticalAlignment="Top" Width="277" Source="/Real-Madrid-CF-logo-512x711.png" RenderTransformOrigin="2.462,0.701" Grid.ColumnSpan="2">
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFF4F4F4" Offset="0.95"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+
+    </Grid>
+</Window>
